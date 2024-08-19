@@ -1,3 +1,4 @@
+/*root colors */
 :root{
     --orange-color:#DA722C;
     --dark-blue-color:#023047;
@@ -6,7 +7,89 @@
     --light-blue-color:#6F7DFB;
     --blue-color:#057ADA;
 }
-footer{
+/*base styling */
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    font-family: "Poppins",sans-serif;
+}
+.wrapper{
+    max-width: 1134px;
+    margin: 0 auto;
+}
+/*Button styling */
+.btn{
+   padding: 16px 32px;
+   border-radius: 24px;
+   color: #fff;
+   display: inline-block;
+   font-size: 16px;
+   font-weight: bold;
+   text-decoration: none;
+   position: relative;
+   
+}
+.btn.dark{
+    background:var(--dark-blue-color)
+}
+.btn.light{
+    background: var(--orange-color);
+}
+.btn.enrol-icon::before{
+    content: url("assets/PencilAlt.svg");
+    position: absolute;
+    top: 50%;
+    left: 32px;
+    transform: translateY(-50%);
+    
+}
+.btn.enrol-icon{
+    padding: 60px;
+}
+/*header*/
+header{
+    background: linear-gradient(180deg,#6F7DFB 0%,#26308c);
+    height: 100vh;
+    width: 100%;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 1134px;
+  padding: 36px 0;
+    z-index: 100;
+    transition: all 500ms ease;
+}
+nav.scrolled{
     background: var(--dark-color);
-    color: #fff;
+    box-shadow: 0 16px 14px -8px rgba(0, 0, 0, 0.3);
+    border-radius: 0 0 8px 8px;
+    top: 0;
+    padding: 12px;
+}
+nav .logo{
+  font-family: "Raleway",sans-serif;
+  font-weight: 900;
+  font-size: 40px;
+  color: #ffff;
+}
+nav ul{
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    list-style: none;
+    margin: 0;
+}
+nav ul li a{
+    font-weight: bold;
+    font-size: 16px;
+    color: #ffff;
+    text-decoration: none;
 }
