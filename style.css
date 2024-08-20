@@ -580,5 +580,34 @@ header {
     .testimonials-section h2 {
       margin-bottom: 20px;
     }
-  
+    /*courses section */
+    .courses-section .course-cards{
+      flex-direction: column;
+      gap: 80px;
+    }
+    .courses-section .course-card{
+      margin: 0;
+    }
+    .courses-section h2{
+      margin-bottom: 42px;
+    }
+    .courses-section .course-card img{
+      height: 350px;
+      object-fit: cover;
+    }
+    .courses-section .course-card h3{
+      font-size: 24px;
+    }
+    .courses-section .wrapper .btn{
+         right: 100px;
+    }
+    .courses-section .course-card:last-child{
+      margin-bottom: 50px;
+    }
+    footer .links-container{
+      grid-template-columns: 1fr 1fr;
+    }
+    footer .links-container .links:last-child{
+      grid-column: 1/3;
+    }
   }
